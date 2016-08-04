@@ -1,5 +1,5 @@
 {
-  "name": "react-native-smart-parabola",
+  "name": "@react-native-component/react-native-smart-parabola",
   "version": "1.0.0",
   "description": "A smart parabola for react-native apps",
   "main": "parabola.js",
