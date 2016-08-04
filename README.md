@@ -35,8 +35,8 @@ import {
     Platform,
 } from 'react-native'
 
-import Parabola from '../../react-native-smart-parabola'
-import Button from '../../react-native-smart-button'
+import Parabola from 'react-native-smart-parabola'
+import Button from 'react-native-smart-button'
 import image_cart from '../images/cart.png'
 
 let {width: deviceWidth, height: deviceHeight} = Dimensions.get('window')
