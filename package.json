@@ -1,0 +1,26 @@
+{
+  "name": "react-native-smart-parabola",
+  "version": "1.0.0",
+  "description": "A smart parabola for react-native apps",
+  "main": "parabola.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-native-component/react-native-smart-parabola.git"
+  },
+  "keywords": [
+    "react-native",
+    "smart",
+    "cart",
+    "parabola",
+    "component"
+  ],
+  "author": "HISAME SHIZUMARU",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/react-native-component/react-native-smart-parabola/issues"
+  },
+  "homepage": "https://github.com/react-native-component/react-native-smart-parabola#readme"
+}
