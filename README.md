@@ -272,5 +272,5 @@ start             | object | No       |           | determine the start coordina
 end               | object | No       |           | determine the end coordinate (pageX, pageY)
 renderParabola    | func   | No       |           | determine the parabola view
 
-[1]: http://cyqresig.github.io/img/react-native-smart-parabola-preview-ios-v1.0.0.gif
-[2]: http://cyqresig.github.io/img/react-native-smart-parabola-preview-android-v1.0.0.gif
+[1]: http://cyqresig.github.io/img/react-native-smart-parabola-preview-ios-v1.0.1.gif
+[2]: http://cyqresig.github.io/img/react-native-smart-parabola-preview-android-v1.0.1.gif
