@@ -47,8 +47,7 @@ export default class Parabola extends Component {
         this.state = {
             parabolas: [],
         }
-        this._startTime = null
-
+        this._isAnimating = false
     }
 
     componentWillReceiveProps (nextProps) {
@@ -85,15 +84,20 @@ export default class Parabola extends Component {
     _addBall (parabola) {
         this.state.parabolas.push(parabola)
 
-        this._updateBalls()
+        if(!this._isAnimating) {
+            this._updateBalls()
+        }
     }
 
     _updateBalls () {
+        this._isAnimating = true
+
         if (this.state.parabolas.length == 0) {
+            this._isAnimating = false
             return
         }
 
-        let {duration, rate,} = this.props
+        let {duration, rate, top: rry1,} = this.props
 
         //let r_animationEnd //test code
 
@@ -121,7 +125,6 @@ export default class Parabola extends Component {
 
             let direction = rx2 > rx1 ? 1 : -1
 
-            let {top: rry1, rate, } = this.props    
             let lmy1 = ry2 - rry1
             let my1 = ry2 - ry1
             let mx2 = direction * (rx2 - rx1)
