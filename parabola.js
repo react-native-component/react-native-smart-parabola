@@ -24,7 +24,7 @@ export default class Parabola extends Component {
         top: 0,
     }
 
-    static PropTypes = {
+    static propTypes = {
         isTrigger: PropTypes.bool.isRequired, //true/false
         rate: PropTypes.number,
         start: PropTypes.shape({
