@@ -16,6 +16,10 @@ This component is compatible with React Native 0.25 and newer.
 npm install react-native-smart-parabola --save
 ```
 
+## Full Demo
+
+see [ReactNativeComponentDemos][0]
+
 ## Usage
 
 Install the button from npm with `npm install react-native-smart-parabola --save`.
@@ -272,5 +276,6 @@ start             | object | No       |           | determine the start coordina
 end               | object | No       |           | determine the end coordinate (pageX, pageY)
 renderParabola    | func   | No       |           | determine the parabola view
 
+[0]: https://github.com/cyqresig/ReactNativeComponentDemos
 [1]: http://cyqresig.github.io/img/react-native-smart-parabola-preview-ios-v1.0.1.gif
 [2]: http://cyqresig.github.io/img/react-native-smart-parabola-preview-android-v1.0.1.gif
