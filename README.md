@@ -1,5 +1,10 @@
 # react-native-smart-parabola
 
+[![npm](https://img.shields.io/npm/v/react-native-smart-parabola.svg)](https://www.npmjs.com/package/react-native-smart-parabola)
+[![npm](https://img.shields.io/npm/dm/react-native-smart-parabola.svg)](https://www.npmjs.com/package/react-native-smart-parabola)
+[![npm](https://img.shields.io/npm/dt/react-native-smart-parabola.svg)](https://www.npmjs.com/package/react-native-smart-parabola)
+[![npm](https://img.shields.io/npm/l/react-native-smart-parabola.svg)](https://github.com/react-native-component/react-native-smart-parabola/blob/master/LICENSE)
+
 A smart parabola for react-native apps. It is usually used for shopping cart. Written in JS for cross-platform support.
 It works on iOS and Android.
 
