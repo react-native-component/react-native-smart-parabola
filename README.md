@@ -27,7 +27,7 @@ see [ReactNativeComponentDemos][0]
 
 ## Usage
 
-Install the button from npm with `npm install react-native-smart-parabola --save`.
+Install the package from npm with `npm install react-native-smart-parabola --save`.
 Then, require it from your app's JavaScript files with `import Parabola from 'react-native-smart-parabola'`.
 
 ```js
