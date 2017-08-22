@@ -42,6 +42,7 @@ import {
     Image,
     Dimensions,
     Platform,
+    Animated,
 } from 'react-native'
 
 import Parabola from 'react-native-smart-parabola'
@@ -253,14 +254,14 @@ export default class ParabolaDemo extends Component {
         })
     }
 
-    _renderParabola = ({index, translateX, translateY}) => {
+    _renderParabola = ({index, AnimatedVaule}) => {
         return (
-            <View
+            <Animated.View
                 key={`'parabola-ball-'${index}`}
                 style={[
                 {position: 'absolute',},    //Don't forget to set this
                 {width: 20, height: 20, borderRadius: 10, backgroundColor: 'red',},
-                {transform: [{translateX}, {translateY}]},
+                AnimatedVaule,
            ]}
             />
         )
