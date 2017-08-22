@@ -14,6 +14,7 @@ import {
     View,
     Text,
     Dimensions,
+    Animated,
 } from 'react-native'
 
 export default class Parabola extends Component {
@@ -46,12 +47,13 @@ export default class Parabola extends Component {
         // 初始状态
         this.state = {
             parabolas: [],
+            ParabolaAnimated : [],
         }
         this._isAnimating = false
     }
 
-    componentWillReceiveProps (nextProps) {
-        let {start, end, isTrigger,} = nextProps
+    start () {
+        const {start, end, isTrigger,} = this.props
         if (isTrigger) {
             let parabola = {
                 start,
@@ -64,16 +66,14 @@ export default class Parabola extends Component {
             this._addBall(parabola)
         }
     }
-
     render () {
-        let parabolas = this.state.parabolas.map((parabola, index) => {
-            let {translateX, translateY,} = parabola
+        const parabolas = this.state.parabolas.map((parabola, index) => {
             return this.props.renderParabola({
                 index,
-                translateX,
-                translateY,
+                AnimatedVaule : this.state.ParabolaAnimated[index].getLayout()
             })
         })
+
         return (
             <View style={{position: 'absolute', left: 0, top: 0}}>
                 {parabolas}
@@ -83,6 +83,7 @@ export default class Parabola extends Component {
 
     _addBall (parabola) {
         this.state.parabolas.push(parabola)
+        this.state.ParabolaAnimated.push(new Animated.ValueXY(0))
 
         if(!this._isAnimating) {
             this._updateBalls()
@@ -97,9 +98,9 @@ export default class Parabola extends Component {
             return
         }
 
-        let {duration, rate, top: rry1,} = this.props
+        let {duration, rate, top: rry1,endFunc} = this.props
 
-        //let r_animationEnd //test code
+        let r_animationEnd
 
         let parabolas = this.state.parabolas.map((parabola) => {
 
@@ -114,7 +115,7 @@ export default class Parabola extends Component {
                 else {
                     interval = duration
                     parabola.animationEnd = true
-                    //r_animationEnd = true //test code
+                    r_animationEnd = true
                 }
             }
 
@@ -149,13 +150,24 @@ export default class Parabola extends Component {
             return parabola != null
         })
 
-        this.setState({
-            parabolas,
+        parabolas.map((data,i)=>{
+            this.state.ParabolaAnimated[i].setValue({
+                x:data.translateX,
+                y:data.translateY
+            })
         })
 
-        //if(!r_animationEnd)   //test code
+        if(parabolas.length!=this.state.parabolas){
+            this.setState({
+                parabolas,
+            })
+        }
+
+
+        if(r_animationEnd){
+            endFunc()
+        }
         requestAnimationFrame(this._updateBalls.bind(this))
     }
 
 }
-
